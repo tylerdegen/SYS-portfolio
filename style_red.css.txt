@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Andika",Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #5D5B58;
+  padding: 20px;
+  background: none repeat scroll 0% 0% #F0F0F0;
+}
+
+.wrapper {
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.5);
+  float: left;
+  width:100%;
+}
+
+
+
+a:link, a:visited {
+  color: #970000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ca0000;
+}
+
+
+
+/* navigation */
+
+
+
+header {
+  padding: 0px 20px;
+  height: 245px;
+  /*logo*/
+  //background: url("/ohiospeaks/dev/images/ohioSpeaks_trans.png") no-repeat scroll 50% 34px transparent;
+  //background: url("/seeyourspeech/images/ohioSpeaks_trans.png") no-repeat scroll 50% 34px transparent;
+  background: url("/seeyourspeech/images/SYS_trans.png") no-repeat scroll 50% 34px transparent;
+  //background: url("/images/SYS_trans.png") no-repeat scroll 50% 34px transparent;
+  text-indent: -9999px;
+  width: 100%;
+}
+
+
+header, nav { /*add any other elements that need to display as a "row" */
+  height: 245px;
+  margin: 0px auto;
+  max-width: 960px;
+  /* overflow: hidden; breaks dropdown TD 6/23 */
+  width: 100%;
+
+}
+
+nav {
+  padding: 0px;
+  background-color: #934B4D !important;
+  height: 63px;
+}
+
+nav ul {
+  list-style: outside none none;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+nav ul li {
+  display: block;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li a{
+  color: #FFF !important;
+display: block;
+font-family: "Bitter",serif;
+font-size: 17px;
+font-weight: bold;
+line-height: 63px;
+padding: 0px 22px;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  background: #C97F81;
+}
+
+nav ul li:hover {
+  background: #C97F81;
+}
+
+nav ul li a.active {
+  background: #5F181A;
+}
+
+/* dropdown */
+
+nav ul ul{
+  top: 100%;
+  left: 20%; /*this seems kind of hacky*/
+  display: none;
+  background-color: #934B4D;
+}
+
+nav ul li:hover > ul {
+  display: block;
+  position: absolute;
+  margin-left: -30px;
+
+}
+
+nav ul ul li {
+  display: block;
+  float: none;
+}
+
+nav ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+
+}
+
+/**/
+
+/*content*/
+
+#content {
+  position: relative;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+section {
+  /* margin: 0px 320px 0px 0px; */
+  margin: 0px 0px 0px 0px;
+}
+
+section article {
+  color: #000;
+  display: block;
+  float: left;
+  padding: 0 20px;
+  box-shadow: 0px 0px 2px #888;
+  max-width: 960px;
+  width: 100%;
+  border-radius: 6px;
+  background: #FFF;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+article img {
+  margin: 0px 0px 20px 20px;
+  border-radius: 6px;
+  border: 1px solid #37352E;
+  /*width: 50%;*/
+  /*float: right;*/
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+p {
+  margin: 20px 0px 23px;
+}
+
+.notification {
+  color: #a68625;
+  background-color: #FFFF00;/*#FFE596;*/
+  padding: 1em;
+  width: 50%;
+  margin: 2em auto;
+  text-align: center;
+  border: 0.5em solid #970000;
+  font-size: 1.1em;
+}
+
+
+.notification ul{
+   text-align: left;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+/* sidebar */
+
+aside {
+  right: 0px;
+  top: 0px;
+  width: 300px;
+  color: #000;
+  display: block;
+  float: right;
+  padding: 20px;
+  box-shadow: 0px 0px 2px #888;
+  font-size: 1em;
+  font-weight: normal;
+  text-align: left;
+  border-radius: 6px;
+  background: #FFF;
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-family: "Bitter",serif;
+  font-weight: bold;
+  font-size: 17px;
+  font-style: normal;
+  color: #000;
+  margin: 0px;
+  text-transform: uppercase;
+  /* the separator thing -- probably a better way to do this */
+  background: url('/seeyourspeech/images/heading.png') repeat-x scroll 0px 100% transparent;
+  padding: 5px 0px 20px;
+  text-align: center;
+}
+
+/* footer */
+
+footer {
+  /* background: none repeat scroll 0% 0% transparent; */
+  /*background: url('/dev/images/content.png') repeat-y scroll 100% 0px transparent;*/
+  clear: both;
+  font-size: 12px;
+  width: 100%;
+  position: relative;
+  max-width: 916px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 20px;
+}
+
+footer img {
+  vertical-align: middle;
+}
+
+footer p {
+    font-family: "Bitter",serif;
+    text-transform: uppercase;
+    color: #606060;
+    font-size: 12px;
+    font-style: italic;
+    margin: 0 20px;
+    display: inline;
+}
+
+#contactUs p {
+  background: none;
+  top: 12px;
+  position: absolute;
+  right: 0px;
+  line-height: 2;
+  text-align: center;
+  /*font-family: "Andika",Helvetica,Arial,sans-serif;*/
+}
