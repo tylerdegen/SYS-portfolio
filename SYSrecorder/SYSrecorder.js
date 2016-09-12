@@ -1,6 +1,3 @@
-/*button hack*/
-$('#begin').prop('disabled',true);
-
 var leftchannel = [];
 var rightchannel = [];
 var enabled = false; //added TD 10/20
@@ -47,8 +44,7 @@ var pausePlayRecording = function () {
 
 var wamiRecBuild = function () {
     alert('getUserMedia not supported in this browser. Attempt to continue with WAMI.');
-    /*button hack*/
-    $("#begin").prop('disabled',false);
+
 
     recordMethod = 'WAMI';
     // initialize Wami
@@ -161,8 +157,6 @@ var h5RecBuild = function (e) {
         console.log("sample rate is " + sampleRate);
 
         console.log('succcess');
-        /*button hack*/
-        $('#begin').prop('disabled',false);
         enabled = true;
         // creates a gain node
         volume = context.createGain();
@@ -241,9 +235,6 @@ var h5RecBuild = function (e) {
             }).done(function (data) {
                 console.log(data);
                 console.log(filename + " saved!");
-                /*button hack*/
-                $('#continue').prop('disabled',false);
-                $("#slider").text("Continue when ready");
             });
         };
         reader.readAsDataURL(blob);
