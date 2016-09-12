@@ -38,25 +38,6 @@
   body {padding: 20px;}
 </style>
 
-<?php
-// CW 8/29
-$dirlength = strlen(__DIR__)-7;
-$perf = substr(substr($_SERVER["SCRIPT_FILENAME"], $dirlength),0,16);
-$perf3 = substr(substr($_SERVER["SCRIPT_FILENAME"], $dirlength),0,17);
-$perft = substr(substr($_SERVER["SCRIPT_FILENAME"], $dirlength),0,16);
-if ($perf == "perform_task.php") {
-//  require_once("sys_perform_header.php");
-  require_once("/var/www/sysdev/seeyourspeech/scripts/sys_perform_header.php");
-} elseif ($perf3 == "perform_task3.php") {
-//  require_once("sys_perform_header.php");
-  require_once("/var/www/sysdev/seeyourspeech/scripts/sys_perform_header3.php");
-} elseif ($perft == "task.php") {
-//  require_once("sys_perform_header.php");
-  require_once("/var/www/sysdev/seeyourspeech/scripts/sys_perform_header.php");
-}
-
-?>
-
 <body>
 
 <div class="wrapper">
